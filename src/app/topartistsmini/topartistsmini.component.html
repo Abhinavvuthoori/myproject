@@ -1,0 +1,38 @@
+
+
+<div class="row mt-2">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <img src={{artists.cover}} alt="" width="80%" height="300px">
+    </div>
+    <div class="col-4">
+    </div>
+</div> 
+
+<h1 class="text-center bg-info mt-3">collections of {{artists.id}}</h1>
+
+
+<div>
+
+<h1 class="text-center" ></h1>
+
+<table class="table table-hover" width="40px">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"></th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let a of artists.songs" >
+      <tr >
+        <th scope="row" >{{a.sid}}</th>
+        <td>{{a.sname}}</td>
+        <td>{{a.time}}</td>
+        <td>play <i class="fas fa-play-circle"></i></td>
+      </tr>
+      
+    </tbody>
+  </table> 
+</div>

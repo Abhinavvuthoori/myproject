@@ -1,0 +1,15 @@
+<div *ngIf="artists">
+    <h1 class="mb-3 mt-4 category mb-5">Listen by your favourite singer</h1>
+    <div class="container">
+      <div class="row row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-2 row-cols-xs-1">
+          <div class=" mb-4" *ngFor="let a of artists">
+              <div class="card" style="border-radius: 10px; border: 3px round black;" >
+                  <a (click)=onClickArtists(a.id)><img src={{a.cover}} width=100% height=180px></a>
+                  <div class="card-body gutters-4">
+                    <p class="card-text">{{a.id}}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
